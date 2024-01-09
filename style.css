@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: -webkit-linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+.to-do {
+    max-width: 600px;
+    margin: 100px auto 20px;
+    background-color: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.to-do h2{
+    color: #002765;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.to-do h2 img {
+    width: 30px;
+    margin-left: 6px;
+}
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #edeef0;
+    padding-left: 20px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+.inputs #input1 {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 12px;
+    font-size: 14px;
+    flex: 1;
+}
+.inputs #add {
+    margin-right: 3px;
+    padding: 16px 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .inputs #add {
+        padding: 16px 30px;
+    }
+}
+#task-list li{
+    position: relative;
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+#task-list li::before {
+    position: absolute;
+    content: '';
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 13px;
+}
+#task-list li.checked {
+    color: #555;
+    text-decoration: line-through;  
+}
+#task-list li.checked::before {
+    background-image: url('images/checked.png');
+}
+#task-list li span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+#task-list li span:hover {
+    background-color: #edeef0;
+}
